@@ -1,0 +1,39 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "import-newlines",
+    "newline-destructuring"
+  ],
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "semi": "error",
+    "indent": ["error", 2],
+    "no-trailing-spaces": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "eol-last": "error",
+    "no-unused-vars": "off",
+    "no-undef": "off",
+    "import-newlines/enforce": ["error", {
+      "items": 3,
+      "max-len": 100
+    }],
+    "max-len": ["error", {
+      "code": 130,
+      "ignorePattern": "d=\"([\\s\\S]*?)\"",
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true
+    }]
+  }
+}

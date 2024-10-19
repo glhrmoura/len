@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./",
+      "jsx": "react",
+      "module": "esnext",
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "paths": {
+        "@/*": ["src/*"],
+        "@popup/*": ["src/extension/popup/*"]
+      }
+    },
+  }
