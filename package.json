@@ -4,7 +4,7 @@
   "author": "Guilherme Moura <mouraggui@gmail.com> (https://github.com/glhrmoura)",
   "license": "ISC",
   "scripts": {
-    "dev": "webpack serve --config webpack.dev.js",
+    "dev": "webpack --config webpack.dev.js",
     "prod": "webpack --config webpack.prod.js && rm dist:prod/src/popup.js.LICENSE.txt"
   },
   "devDependencies": {

@@ -1,25 +1,19 @@
 const path = require('path');
 
 const CopyPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
+  watch: true,
   entry: {
-    popup: path.resolve(__dirname, 'src/extension/popup/index.tsx'),
-    content: path.resolve(__dirname, 'src/extension/scripts/index.ts'),
     'service-worker': path.resolve(__dirname, 'src/extension/service-worker/index.ts'),
+    'dom-listener': path.resolve(__dirname, 'src/extension/content-scripts/dom-listener.ts'),
   },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist:dev'),
-  },
-  devServer: {
-    hot: false,
-    devMiddleware: {
-      writeToDisk: true,
-    },
   },
   module: {
     rules: [
@@ -64,14 +58,14 @@ module.exports = {
     },
   },
   plugins: [
-    new HtmlWebpackPlugin({
+    /* new HtmlWebpackPlugin({
       filename: 'popup.html',
       chunks: ['popup'],
       template: path.resolve(
         __dirname,
         'src/extension/popup/templates/index.html'
       ),
-    }),
+    }), */
     new CopyPlugin({
       patterns: [
         {

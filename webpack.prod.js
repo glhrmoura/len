@@ -1,15 +1,14 @@
 const path = require('path');
 const ZipPlugin = require('zip-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
   devtool: false,
   entry: {
-    popup: path.resolve(__dirname, 'src/extension/popup/index.tsx'),
-    content: path.resolve(__dirname, 'src/extension/scripts/index.ts'),
     'service-worker': path.resolve(__dirname, 'src/extension/service-worker/index.ts'),
+    'dom-listener': path.resolve(__dirname, 'src/extension/content-scripts/dom-listener.ts'),
   },
   output: {
     filename: '[name].js',
@@ -58,14 +57,14 @@ module.exports = {
     },
   },
   plugins: [
-    new HtmlWebpackPlugin({
+    /* new HtmlWebpackPlugin({
       filename: 'popup.html',
       chunks: ['popup'],
       template: path.resolve(
         __dirname,
         'src/extension/popup/templates/index.html'
       ),
-    }),
+    }), */
     new CopyPlugin({
       patterns: [
         {
