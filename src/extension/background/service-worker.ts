@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener((request) => {
-  if (request.charCount !== undefined) {
-    const charCount = request.charCount;
-    chrome.action.setBadgeText({ text: charCount > 0 ? charCount.toString() : '' });
+  if (request.charLen !== undefined) {
+    const charLen = request.charLen;
+    chrome.action.setBadgeText({ text: charLen > 0 ? charLen.toString() : '' });
     chrome.action.setBadgeBackgroundColor({ color: '#FFFFFF' });
   }
 });

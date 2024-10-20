@@ -5,6 +5,7 @@
   "author": "Guilherme Moura <mouraggui@gmail.com> (https://github.com/glhrmoura)",
   "version": "0.1.2",
   "action": {
+    "default_popup": "popup.html",
     "default_icon": "icons/icon-16.png"
   },
   "background": {
