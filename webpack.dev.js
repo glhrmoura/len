@@ -8,7 +8,7 @@ module.exports = {
   devtool: 'source-map',
   watch: true,
   entry: {
-    'service-worker': path.resolve(__dirname, 'src/extension/service-worker/index.ts'),
+    'service-worker': path.resolve(__dirname, 'src/extension/background/service-worker.ts'),
     'dom-listener': path.resolve(__dirname, 'src/extension/content-scripts/dom-listener.ts'),
   },
   output: {
