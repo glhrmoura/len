@@ -5,7 +5,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "webpack --config webpack.dev.js",
-    "prod": "webpack --config webpack.prod.js"
+    "prod": "webpack --config webpack.prod.js && rm dist:prod/src/popup.js.LICENSE.txt"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.240",
