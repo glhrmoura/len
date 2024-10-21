@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
-  devtool: false,
   entry: {
     'popup': path.resolve(__dirname, 'src/extension/popup/index.tsx'),
     'service-worker': path.resolve(__dirname, 'src/extension/background/service-worker.ts'),
