@@ -11,7 +11,7 @@ A browser extension that automatically detects when a user selects text on a web
 
 ### Chrome Web Store
 
-[**Len: Measure textual content**](https://chrome.google.com/webstore/detail/coin/meebfpmdedodccopjbkcihiecpmiljml)
+[**Len: Measure textual content**](https://chromewebstore.google.com/detail/len-measure-textual-conte/ojodnhhmfnjddbeipjcjhjbdbkkedcgf)
 
 ### License
 
