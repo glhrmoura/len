@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist:prod/src'),
+    path: path.resolve(__dirname, 'dist/prod/src'),
   },
   module: {
     rules: [
@@ -62,7 +62,7 @@ module.exports = {
       chunks: ['popup'],
       template: path.resolve(
         __dirname,
-        'src/extension/popup/templates/index.html'
+        'src/extension/popup/popup.template.html'
       ),
     }),
     new CopyPlugin({
@@ -77,7 +77,7 @@ module.exports = {
     }),
     new ZipPlugin({
       filename: 'len.zip',
-      path: path.resolve(__dirname, 'dist:prod'),
+      path: path.resolve(__dirname, 'dist/prod'),
     }),
   ],
 };
